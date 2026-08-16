@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Sazón De La Mami Zuri | Comida Casera</title>
+  
+  <!-- Tipografías de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navegación -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">La Sazón de <span>Mami Zuri</span></a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#menu" class="nav-link">Menú</a></li>
+          <li><a href="#contacto" class="btn btn-primary btn-surprise"><span class="btn-text">Pedir Ahora</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="badge-home">Sabor 100% Casero</span>
+        <h1 class="hero-title">La Sazón De La Mami Zuri</h1>
+        <p class="hero-slogan">"Gracias a Dios y Con Mucho Amor"</p>
+        <p class="hero-description">Platos criollos preparados diariamente con ingredientes frescos y el toque único del hogar.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary btn-surprise"><span class="btn-text">Ver Menú del Día</span></a>
+          <a href="#contacto" class="btn btn-secondary btn-surprise"><span class="btn-text">Ubicación</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menú Dinámico -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-title">Nuestras Especialidades</span>
+        <h2>Menú Interactivo</h2>
+        <p>Selecciona una categoría para filtrar nuestros platillos</p>
+      </div>
+
+      <!-- Filtros Dinámicos (JavaScript) -->
+      <div class="filter-wrapper">
+        <button class="filter-btn active" data-category="todos">Todos</button>
+        <button class="filter-btn" data-category="almuerzos">Almuerzos</button>
+        <button class="filter-btn" data-category="especiales">Especiales</button>
+        <button class="filter-btn" data-category="bebidas">Bebidas & Postres</button>
+      </div>
+
+      <!-- Grid de Comidas -->
+      <div class="menu-grid" id="menu-grid">
+        
+        <!-- Plato 1 -->
+        <article class="food-card" data-category="almuerzos">
+          <div class="food-img-box bg-food-1">
+            <span class="badge-price">$4.50</span>
+          </div>
+          <div class="food-info">
+            <span class="food-tag">Almuerzo</span>
+            <h3>Seco de Pollo Casero</h3>
+            <p>Acompañado de arroz amarillo, maduro frito y ensalada fresca.</p>
+            <button class="btn btn-card btn-surprise" onclick="pedirPorWhatsApp('Seco de Pollo Casero', '$4.50')">
+              <span class="btn-text">Ordenar por WhatsApp</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Plato 2 -->
+        <article class="food-card" data-category="especiales">
+          <div class="food-img-box bg-food-2">
+            <span class="badge-price">$6.00</span>
+          </div>
+          <div class="food-info">
+            <span class="food-tag">Especial</span>
+            <h3>Guatita Tradicional</h3>
+            <p>Con salsa de maní espesa, aguacate, arroz blanco y huevo duro.</p>
+            <button class="btn btn-card btn-surprise" onclick="pedirPorWhatsApp('Guatita Tradicional', '$6.00')">
+              <span class="btn-text">Ordenar por WhatsApp</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Plato 3 -->
+        <article class="food-card" data-category="bebidas">
+          <div class="food-img-box bg-food-3">
+            <span class="badge-price">$1.50</span>
+          </div>
+          <div class="food-info">
+            <span class="food-tag">Bebida</span>
+            <h3>Jugo Natural de Maracuyá</h3>
+            <p>Jugo helado preparado al momento con fruta 100% natural.</p>
+            <button class="btn btn-card btn-surprise" onclick="pedirPorWhatsApp('Jugo de Maracuyá', '$1.50')">
+              <span class="btn-text">Ordenar por WhatsApp</span>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de Página -->
+  <footer id="contacto" class="footer">
+    <div class="container footer-container">
+      <div>
+        <h3 class="logo logo-footer">La Sazón de <span>Mami Zuri</span></h3>
+        <p class="footer-slogan">"Gracias a Dios y Con Mucho Amor"</p>
+        <p class="footer-text">Comida hecha con dedicación e ingredientes seleccionados para darte la mejor experiencia.</p>
+      </div>
+      <div class="footer-contact">
+        <h3>Pedidos Directos</h3>
+        <p>Haz tu pedido rápido a través de nuestra línea oficial de WhatsApp.</p>
+        <a href="https://wa.me/593900000000?text=Hola,%20deseo%20consultar%20el%20menu" target="_blank" class="btn btn-whatsapp-surprise btn-surprise">
+          <span class="btn-text">Enviar Mensaje Directo</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 La Sazón De La Mami Zuri. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script Interactivo JS -->
+  <script>
+    // Filtrado de Menú Dinámico
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const foodCards = document.querySelectorAll('.food-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const category = button.getAttribute('data-category');
+
+        foodCards.forEach(card => {
+          if (category === 'todos' || card.getAttribute('data-category') === category) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Envío Directo a WhatsApp
+    function pedirPorWhatsApp(producto, precio) {
+      const telefono = "593900000000"; // Reemplazar con el número real
+      const mensaje = `Hola Mami Zuri! 👋 Deseo realizar un pedido de: *${producto}* (${precio}). "Gracias a Dios y Con Mucho Amor".`;
+      const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
